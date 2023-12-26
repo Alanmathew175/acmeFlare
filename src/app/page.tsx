@@ -1,113 +1,289 @@
-import Image from 'next/image'
-
+import Image from "next/image";
+import Link from "next/link";
+import bgImage from "../../public/acmeFlareBanner.webp";
+import logo from "../../public/logo-acmeflare.png";
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    return (
+        <>
+            <main className="min-h-screen w-full relative">
+                <div className="absolute inset-0">
+                    <Image
+                        src={bgImage}
+                        alt=""
+                        layout="fill"
+                        objectFit="cover"
+                        quality={100}
+                    />
+                </div>
+                <div className="  z-30 absolute pb-5 w-full flex justify-center  ">
+                    <Image
+                        src={logo}
+                        alt=""
+                        objectFit="contain"
+                        quality={100}
+                    />
+                </div>
+                <div className=" my-33 md:my-40  z-40 absolute pb-5 w-full text-4xl  xl:text-7xl 2xl:text-7xl lg:text-6xl sm:text-5xl text-center md:text-6xl font-bold text-white  bg-opacity-50 rounded-xl">
+                    <h1 className="mx-10 mt-10 ">Acmeflare Technologies</h1>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+                    <h3 className="text-2xl font-bold ml-12 mt-4">
+                        Monetizing Innovations
+                    </h3>
+                </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+                <div className="w-full flex justify-center">
+                    <div className="absolute z-20 bottom-0 w-full max-w-screen-lg mx-auto bg-cyan-600 bg-opacity-60  h-1/2 sm:h-1/4 p-10">
+                        <div className="w-full h-full flex justify-center items-center">
+                            <div>
+                                {" "}
+                                <p style={{ color: "white" }}>
+                                    At Acmeflare, we embody the spirit of
+                                    “Monetizing Innovations.” Our mission is to
+                                    transform your ideas into money-making
+                                    machines. With a strategic blend of
+                                    creativity and technology, we are dedicated
+                                    to propelling your business to new heights.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+            <div className="w-full bg-slate-200">
+                <div className=" w-full max-w-screen-lg mx-auto bg-white  opacity-80 shadow-2xl">
+                    <h3 className="text-3xl text-center text-wrap font-bold pt-9 text-cyan-600 sm:mb-8 md:mb-0">
+                        Our Core Services
+                    </h3>
+                    <div className="flex px-12 flex-col sm:flex-row">
+                        <div className="flex justify-center  items-center flex-col ">
+                            <h3 className="text-2xl text-wrap font-bold pb-3 text-center sm:text-left">
+                                Digital Marketing and Branding
+                            </h3>
+                            <p className="pr-8 text-black text-center">
+                                Harness the power of our skilled content
+                                creation team, adept in crafting compelling
+                                narratives, engaging visuals, and impactful VFX.
+                                Elevate your brand through strategic digital
+                                marketing and let us tell your story in a way
+                                that captivates your audience.
+                            </p>
+                        </div>
+                        <div className="w-full relative m-auto overflow-hidden">
+                            {" "}
+                            <Image
+                                src="/digital-marketing.avif"
+                                alt="Digital marketing"
+                                width={568}
+                                height={586}
+                                className="max-w-full  transition-all duration-300 block w-full h-auto transform scale-100 hover:scale-110"
+                            />
+                        </div>
+                    </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+                    <div className="flex px-12 -mt-8 flex-col-reverse sm:flex-row  ">
+                        <div className="w-full relative m-auto overflow-hidden">
+                            {" "}
+                            <Image
+                                src="/web-development.avif"
+                                alt="web development"
+                                width={568}
+                                height={586}
+                                className="max-w-full transition-all duration-300 block w-full h-auto transform scale-100 hover:scale-110"
+                            />
+                        </div>
+                        <div className="mt-16 ">
+                            <h3 className="text-2xl text-wrap font-bold py-3 text-center sm:text-left">
+                                Web & Mobile App Development
+                            </h3>
+                            <p className="pr-8 text-black text-center sm:text-left">
+                                Build a strong online presence with our expert
+                                web development services. We create responsive
+                                and user-friendly websites tailored to meet your
+                                business objectives.
+                            </p>
+                            <p className="pr-8 text-black mt-4 text-center sm:text-left ">
+                                Seamlessly integrate your brand into the mobile
+                                world with our cutting-edge app development
+                                services. From concept to deployment, we bring
+                                your app ideas to life.
+                            </p>
+                        </div>
+                    </div>
+                    <div className="flex px-12 mb-4  flex-col sm:flex-row  sm:mt-4 lg:-mt-8 ">
+                        <div className="flex justify-center flex-col  text-center sm:text-left ">
+                            <h3 className="text-2xl text-wrap font-bold py-3 ">
+                                Cybersecurity Services
+                            </h3>
+                            <p className="pr-8 text-black">
+                                Safeguard your digital assets with our robust
+                                cybersecurity services. We provide comprehensive
+                                solutions to protect your business from evolving
+                                cyber threats.
+                            </p>
+                            <h3 className="text-2xl text-wrap font-bold py-3 mt-3">
+                                Cloud Services and Solutions
+                            </h3>
+                            <p className="pr-8 text-black">
+                                Embrace the flexibility and scalability of the
+                                cloud. Our cloud services optimize your
+                                operations and enhance overall efficiency
+                            </p>
+                        </div>
+                        <div className="w-full relative m-auto overflow-hidden -mb-4">
+                            {" "}
+                            <Image
+                                src="/cyber-security.avif"
+                                alt="Cybersecurity Services"
+                                width={568}
+                                height={586}
+                                className="max-w-full -mt-8 transition-all duration-300 block w-full h-auto transform scale-100 hover:scale-110"
+                            />
+                        </div>
+                    </div>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+                    <div className="flex justify-center flex-col-reverse sm:flex-row  text-center sm:text-left ">
+                        <div className="w-full relative m-auto overflow-hidden">
+                            {" "}
+                            <Image
+                                src="/cloud-service.avif"
+                                alt="web development"
+                                width={568}
+                                height={586}
+                                className="max-w-full transition-all duration-300 block w-full h-auto transform scale-100 hover:scale-110"
+                            />
+                        </div>
+                        <div className="flex justify-center flex-col ">
+                            <h3 className="text-2xl text-wrap font-bold py-3">
+                                Cloud Services and Solutions
+                            </h3>
+                            <p className="pr-8 text-black">
+                                Embrace the flexibility and scalability of the
+                                cloud. Our cloud services optimize your
+                                operations and enhance overall efficiency
+                            </p>
+                            <h3 className="text-2xl text-wrap font-bold py-3 mt-2">
+                                IT Consulting and Advisory Services
+                            </h3>
+                            <p className="pr-8 text-black">
+                                Rely on our expert guidance to navigate the
+                                ever-evolving IT landscape. Our consultants
+                                provide strategic insights to help you make
+                                informed decisions.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="flex px-12 py-10 flex-col sm:flex-row text-center sm:text-left">
+                        <div className="flex justify-center flex-col ">
+                            <h3 className="text-2xl text-wrap font-bold py-3">
+                                Digital Marketing and Branding
+                            </h3>
+                            <p className="pr-8 text-black">
+                                Harness the power of our skilled content
+                                creation team, adept in crafting compelling
+                                narratives, engaging visuals, and impactful VFX.
+                                Elevate your brand through strategic digital
+                                marketing and let us tell your story in a way
+                                that captivates your audience.
+                            </p>
+                        </div>
+                        <div className="w-full relative m-auto overflow-hidden">
+                            {" "}
+                            <Image
+                                src="/skill-development.avif"
+                                alt="Digital marketing"
+                                width={568}
+                                height={586}
+                                className="max-w-full transition-all duration-300 block w-full h-auto transform scale-100 hover:scale-110"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className=" text-white bg-slate-950 ">
+                <div className="max-w-screen-xl flex flex-wrap justify-between mx-auto py-10 px-6 ">
+                    <div className="row-span-2 sm:col-span-4 col-start-1 col-end-4 sm:col-end-5 flex flex-col items-start ">
+                        <h3 className="w-full text-2xl font-bold mb-5">
+                            Acmeflare Technologies Private Limited
+                        </h3>
+                        <p className="text-gray-300 mb-20">
+                            Transforming ideas into Money Making Machines
+                        </p>
+                    </div>
+                    <div className="row-span-2 sm:col-span-2 sm:col-start-7 sm:col-end-9 flex flex-col">
+                        <p className="text-black-600 mb-4 font-semibold text-lg">
+                            Contact
+                        </p>
+                        <ul className="text-black-500 ">
+                            <li className="my-2 pt-3 text-gray-100 hover:text-blue-600 cursor-pointer transition-all">
+                                <a href="mailto:info@acmeflare.in">
+                                    info@acmeflare.in
+                                </a>
+                            </li>
+
+                            <li className="my-2 pt-3  text-gray-100 flex items-center   transition-all">
+                                <Image
+                                    alt=""
+                                    src="/phone.svg"
+                                    className="me-3"
+                                    width="18"
+                                    height="18"
+                                />{" "}
+                                <a
+                                    href="tel:+9179079 35902"
+                                    className="hover:text-cyan-600 mr-2"
+                                >
+                                    +91 79079 35902
+                                </a>{" "}
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div className="row-span-2 sm:col-span-2 sm:col-start-9 sm:col-end-11 flex flex-col">
+                        <p className="text-black-600 mb-4 font-semibold text-lg">
+                            Links
+                        </p>
+                        <ul className="text-black-500 ">
+                            <Link href="https://www.instagram.com/acmeflare/">
+                                <li className="my-2 text-gray-300 hover:text-cyan-600 cursor-pointer transition-all flex">
+                                    <Image
+                                        alt=""
+                                        src="/instagram.svg"
+                                        className="me-3"
+                                        width="18"
+                                        height="18"
+                                    />{" "}
+                                    <span>Instagram</span>
+                                </li>
+                            </Link>
+                            <Link href="https://www.linkedin.com/company/acmeflare/">
+                                <li className="my-2 text-gray-300 hover:text-cyan-600 cursor-pointer transition-all flex">
+                                    <Image
+                                        alt=""
+                                        src="/linkedin.svg"
+                                        className="me-3"
+                                        width="18"
+                                        height="18"
+                                    />{" "}
+                                    <span>LinkedIn</span>
+                                </li>
+                            </Link>
+                        </ul>
+                    </div>
+                </div>
+
+                <div className="flex max-w-screen-xl  flex-wrap justify-between mx-auto py-10 px-6   border-t border-gray-600">
+                    <ul className="flex flex-col space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row  text-gray-400">
+                        <li>
+                            <p>
+                                Acmeflare Technologies Private Limited ©{" "}
+                                {new Date().getFullYear()}. All Rights Reserved.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </>
+    );
 }
